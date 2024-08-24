@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="output.css" rel="stylesheet">
+</head>
+<style>
+    body{
+        background-color: #0f0f0f;
+    }
+    ::selection{
+        background-color: white;
+        color: black;
+    }
+</style>
+<body>
+
+        <div class=" w-[700px] header mt-4 mx-auto text-center">
+            <img src="./images/Cropped_Image.png" class="h-20 rounded-full mx-auto" alt="">
+            <h1 class="text-white font-extrabold text-3xl mt-1"> Search Unlimited movies, TV shows and more</h1>
+            <p class="text-neutral-400 mt-1 text-base">Ready to watch movie? Enter your movie name to check if it's a good choice !</p>
+            <div class="flex mt-5">
+                <input id="movieName" class=" p-3 rounded-l-md w-[560px] bg-[#ffffff1c]  text-white outline-none focus:outline-none focus:bg-[#ffffff1e]" type="text" placeholder="Search a movie...">
+                <button id="button" onclick="searchMovie()" class="border rounded-r-lg p-3 w-[140px] bg-[#d7141d] border-none text font-bold text-white text-lg">Search</button>
+            </div>
+        </div>
+    
+        <div id="container" class="w-[700px] mt-6 mx-auto gap-2 hidden">
+            <div class="text-white">
+                <h1 id="title" class="text-2xl font-bold">Mahesinte Prathikaram</h1>
+                <p id="plot" class="text-neutral-300">A fearless warrior on a perilous mission comes face to face with a steely cop serving British forces in this epic saga set in pre-independent India.</p>
+                <div class="mt-2 ">
+                    <p class="font-bold text-white">Genre : <span class="font-normal" id="genre"></span></p>
+                    <div class="border-b border-neutral-800 mt-3"></div>
+                    <p class="font-bold text-white">Year : <span id="year"></span></p>
+                    <div class="border-b border-neutral-800 mt-3"></div>
+                    <p class="font-bold text-white">Runtime : <span id="runtime"></span></p>
+                    <div class="border-b border-neutral-800 mt-3"></div>
+                    <p class="font-bold text-white">Writers : <span id="writers"></span></p>
+                    <div class="border-b border-neutral-800 mt-3"></div>
+                    <p class="font-bold text-white">Director : <span id="director"></span></p>
+                    <div class="border-b border-neutral-800 mt-3"></div>
+                    <p class="font-bold text-white">Language : <span id="lng"></span></p>
+                    <div class="border-b border-neutral-800 mt-3"></div>
+                    <p class="font-bold text-white">imdb Ratings : <span id="imdb"></span></p>
+                    <div class="border-b border-neutral-800 mt-3"></div>
+                    <p class="font-bold text-white">Awards : <span id="awards"></span></p>
+                    <div class="border-b border-neutral-800 mt-3"></div>
+                </div>
+
+            </div>
+            <img id="poster" class="rounded-lg" src="" alt="">
+        </div>
+            
+    
+    
+    <script src="app.js"></script>
+  </h1>
+</body>
+</html>
