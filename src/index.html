@@ -22,39 +22,43 @@
             <p class="text-neutral-400 mt-1 text-base">Ready to watch movie? Enter your movie name to check if it's a good choice !</p>
             <div class="flex mt-5">
                 <input id="movieName" class=" p-3 rounded-l-md w-[560px] bg-[#ffffff1c]  text-white outline-none focus:outline-none focus:bg-[#ffffff1e]" type="text" placeholder="Search a movie...">
-                <button id="button" onclick="searchMovie()" class="border rounded-r-lg p-3 w-[140px] bg-[#d7141d] border-none text font-bold text-white text-lg">Search</button>
+                <button id="button" onclick="searchMovie()"  class="border rounded-r-lg p-3 w-[140px] bg-[#d7141d] border-none text font-bold text-white text-lg">Search</button>
             </div>
+            <div id="error" class="text-2xl font-bold hidden mt-20 mx-auto text-white">Movie not found!🥲</div>
         </div>
     
-        <div id="container" class="w-[700px] mt-6 mx-auto gap-2 hidden">
+        <div id="container" class="w-[700px] my-10 mx-auto gap-2 hidden items-center">
             <div class="text-white">
                 <h1 id="title" class="text-2xl font-bold">Mahesinte Prathikaram</h1>
-                <p id="plot" class="text-neutral-300">A fearless warrior on a perilous mission comes face to face with a steely cop serving British forces in this epic saga set in pre-independent India.</p>
+                <p id="plot" class="text-neutral-400">A fearless warrior on a perilous mission comes face to face with a steely cop serving British forces in this epic saga set in pre-independent India.</p>
                 <div class="mt-2 ">
                     <p class="font-bold text-white">Genre : <span class="font-normal" id="genre"></span></p>
                     <div class="border-b border-neutral-800 mt-3"></div>
-                    <p class="font-bold text-white">Year : <span id="year"></span></p>
+                    <p class="font-bold text-white">imdb Rating : <span class="font-normal" id="imdb"></span></p>
                     <div class="border-b border-neutral-800 mt-3"></div>
-                    <p class="font-bold text-white">Runtime : <span id="runtime"></span></p>
+                    <p class="font-bold text-white">Actors : <span class="font-normal" id="actors"></span></p>
                     <div class="border-b border-neutral-800 mt-3"></div>
-                    <p class="font-bold text-white">Writers : <span id="writers"></span></p>
+                    <p class="font-bold text-white">Writers : <span class="font-normal" id="writers"></span></p>
                     <div class="border-b border-neutral-800 mt-3"></div>
-                    <p class="font-bold text-white">Director : <span id="director"></span></p>
+                    <p class="font-bold text-white">Director : <span class="font-normal" id="director"></span></p>
                     <div class="border-b border-neutral-800 mt-3"></div>
-                    <p class="font-bold text-white">Language : <span id="lng"></span></p>
+                    <p class="font-bold text-white">Language : <span class="font-normal" id="lng"></span></p>
                     <div class="border-b border-neutral-800 mt-3"></div>
-                    <p class="font-bold text-white">imdb Ratings : <span id="imdb"></span></p>
+                    <p class="font-bold text-white">Awards : <span class="font-normal" id="awards"></span></p>
                     <div class="border-b border-neutral-800 mt-3"></div>
-                    <p class="font-bold text-white">Awards : <span id="awards"></span></p>
+                    <p class="font-bold text-white">Year : <span class="font-normal" id="year"></span></p>
+                    <div class="border-b border-neutral-800 mt-3"></div>
+                    <p class="font-bold text-white">Runtime : <span class="font-normal" id="runtime"></span></p>
                     <div class="border-b border-neutral-800 mt-3"></div>
                 </div>
 
             </div>
-            <img id="poster" class="rounded-lg" src="" alt="">
+            <div class="relative w-[650px]">
+                <img id="poster" class=" w-[100%] rounded-lg  object-cover" src="./images/movieposter.jpg" alt="">
+                <p id="suggestion" class="absolute top-1 left-1 bg-orange-200 text-[#311c0e] py-1 px-4 text-sm font-bold rounded-3xl">Must Watch</p>
+            </div>
         </div>
-            
-    
-    
+
     <script src="app.js"></script>
   </h1>
 </body>
