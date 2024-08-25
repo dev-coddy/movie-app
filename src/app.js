@@ -27,10 +27,19 @@ function searchMovie(){
     let movieInput = document.querySelector("#movieName");
     let query = api + movieInput.value;
 
+    // to check the input is empty
+    if (movieInput.value.trim() === "") {
+        error.innerText = 'Movie name required.';
+        error.classList.remove('hidden');
+        container.classList.add('hidden');
+        return;
+    }
+
     // async code fetch returns a promise
     fetch(query).then(data => data.json()).then(data => {
-
+        
         if (data.Error == 'Movie not found!'){
+            error.innerText = 'Movie not found!🥲'; 
             container.classList.add('hidden');
             error.classList.remove('hidden');
         }
@@ -49,7 +58,7 @@ function searchMovie(){
                 suggestion.style.color = '#000000';
             } else {
                 suggestion.innerText = 'Time Waste'
-                suggestion.style.backgroundColor = '#DC143C';
+                suggestion.style.backgroundColor = '#2ECC71';
                 suggestion.style.color = '#FFFFFF'; 
             } 
             error.classList.add('hidden');
